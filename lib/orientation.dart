@@ -12,17 +12,17 @@ class OrientationPlugin {
       const EventChannel('sososdk.github.com/orientationEvent');
 
   /// see [SystemChrome.setEnabledSystemUIOverlays]
-  static Future<void> setEnabledSystemUIOverlays(
-      List<SystemUiOverlay> overlays) async {
-    if (Platform.isAndroid) {
-      await _methodChannel.invokeMethod<void>(
-        'SystemChrome.setEnabledSystemUIOverlays',
-        _stringify(overlays),
-      );
-    } else {
-      SystemChrome.setEnabledSystemUIOverlays(overlays);
-    }
-  }
+  // static Future<void> setEnabledSystemUIOverlays(
+  //     List<SystemUiOverlay> overlays) async {
+  //   if (Platform.isAndroid) {
+  //     await _methodChannel.invokeMethod<void>(
+  //       'SystemChrome.setEnabledSystemUIOverlays',
+  //       _stringify(overlays),
+  //     );
+  //   } else {
+  //     SystemChrome.setEnabledSystemUIOverlays(overlays);
+  //   }
+  // }
 
   /// see [SystemChrome.setPreferredOrientations]
   static Future<void> setPreferredOrientations(
